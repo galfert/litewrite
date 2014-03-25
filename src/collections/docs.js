@@ -58,7 +58,7 @@ define(function(require) {
 
       var origHash = document.location.hash;
 
-      remoteStorage.on('disconnect', function() {
+      remoteStorage.on('disconnected', function() {
         docs.reset();
         docs.welcome();
       });
