@@ -43,9 +43,9 @@ define(function(require) {
     share: function() {
       var html = this.renderDocument(this.model);
       this.remote.addRaw('text/html', html).then(_.bind(function(url) {
-      	remoteStorage.sync().then(_.bind(function() {
-      	  this.model.set('public', url);
-      	}, this));
+        remoteStorage.sync.sync().then(_.bind(function() {
+          this.model.set('public', url);
+        }, this));
       }, this));
     },
 
