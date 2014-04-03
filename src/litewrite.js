@@ -43,8 +43,6 @@ define(function(require) {
       // this is helpful for debugging
       window.remoteStorage = remoteStorage;
 
-      remoteStorage.enableLog();
-
       remoteStorage.displayWidget('remotestorage-connect');
 
       remoteStorage.on('ready', this.triggerConnected);
